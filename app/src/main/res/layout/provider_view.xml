@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  >
+
+        <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@android:color/black"
+        android:id="@+id/provider_image"
+        android:layout_alignParentRight="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true">
+
+
+            <TextView
+                android:id = "@+id/provider_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "Munir Javed, MD"
+                android:textAlignment ="viewStart"
+                android:textSize="@dimen/text_size_20"
+                android:textColor = "@color/colorPrimaryDark" />
+
+            <TextView
+                android:id = "@+id/department_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "Javed Internal Medicine"
+                android:textAlignment ="viewStart"
+                android:textSize="@dimen/text_size_15"
+                android:textColor = "@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left"
+                    android:src="@drawable/appt_location"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id = "@+id/street_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text = "2204 Grant RdD"
+                        android:textAlignment ="viewStart"
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor = "@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:id = "@+id/suite_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text = "Ste 203"
+                        android:textAlignment ="viewStart"
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor = "@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:id = "@+id/city_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text = "Mountain View CA 94040-3877"
+                        android:textAlignment ="viewStart"
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor = "@color/colorPrimaryDark" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <android.support.v7.widget.AppCompatImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/appt_call"/>
+
+                    <TextView
+                        android:id = "@+id/phone_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text = "(650)-940-1335"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor = "@color/colorPrimaryDark" />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <android.support.v7.widget.AppCompatImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/appt_auto_arrival"/>
+
+                    <TextView
+                        android:id = "@+id/autoarrival_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text = "eArrival not available"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor = "@color/colorPrimaryDark" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</merge>

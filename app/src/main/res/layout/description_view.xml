@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id = "@+id/type_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "New Patient Visit"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_24"
+            android:textColor = "@color/colorPrimaryDark" />
+
+        <TextView
+            android:id = "@+id/date_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "Monday, January 8, 2018"
+            android:textAlignment="center"
+            android:textSize ="@dimen/text_size_14"
+            android:textColor = "@color/colorPrimaryDark" />
+
+        <TextView
+            android:id = "@+id/time_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "10:00 AM"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize ="@dimen/text_size_28"
+            android:textColor = "@color/colorPrimaryDark"/>
+
+        <Button
+            android:id = "@+id/visit_begins_button"
+            android:layout_width = "match_parent"
+            android:layout_height="wrap_content"
+            android:text = "Video visit begins now"
+            android:textSize="14sp"
+            android:background="@color/colorAccent"
+            android:visibility="gone"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+
+        <TextView
+            android:id = "@+id/duration_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "20 minutes appointment"
+            android:textAlignment="center"
+            android:textSize ="@dimen/text_size_14"
+            android:textColor = "@color/colorPrimaryDark"/>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width = "match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttons_layout"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <Button
+                android:id = "@+id/cancels_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "Cancel"
+                android:textAllCaps="true"
+                android:textSize ="@dimen/text_size_12"
+                android:textColor="@color/colorPrimary"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_weight="1"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:drawableLeft="@drawable/dialog_close"/>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="?android:dividerVertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                />
+
+            <Button
+                android:id = "@+id/calendar_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:text = "Calendar"
+                android:textColor="@color/colorPrimary"
+                style="?android:attr/borderlessButtonStyle"
+                android:textSize ="@dimen/text_size_12"
+                android:layout_weight="1"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:drawableLeft="@drawable/cal_add"/>
+        </LinearLayout>
+    </LinearLayout>
+</merge>

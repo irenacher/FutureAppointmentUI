@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.s0282656.futureappointmentui.MainActivity">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/personal_recurring_visit_button"
+        android:text = "Personal Recurring Visit"
+        android:onClick="buttonClicked"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_patient_visit_button"
+        android:text = "Photo Visit"
+        android:onClick="buttonClicked"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone_visit_button"
+        android:text = "New patient Visit"
+        android:onClick="buttonClicked"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/video_visit_button"
+        android:text = "Video Visit"
+        android:onClick="buttonClicked"/>
+
+
+</LinearLayout>

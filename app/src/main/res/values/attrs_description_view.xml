@@ -1,0 +1,15 @@
+<resources>
+    <declare-styleable name="AppointmentViews">
+        <attr name="visitType" format="string" />
+        <attr name="visitTypeTextSize" format="dimension"/>
+        <attr name="visitDate" format="string" />
+        <attr name="visitTime" format="string" />
+        <attr name="visitTimeTextSize" format="dimension"/>
+        <attr name="regularTextSize" format="dimension"/>
+        <attr name="visitBeginButtonTitle" format="string" />
+        <attr name="visitDuration" format="string" />
+        <attr name="buttonsTextColor" format="color" />
+        <attr name="buttonsTextSize" format="dimension"/>
+        <attr name="labelsTextColor" format="color" />
+    </declare-styleable>
+</resources>

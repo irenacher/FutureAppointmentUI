@@ -8,11 +8,14 @@ import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.text.TextPaint;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
@@ -75,9 +78,8 @@ public class TrackerView extends LinearLayout implements View.OnClickListener {
 
             if(stepsCount > 1 && descriptor.stepIndex < (stepsCount-1)) {
                 View dummy = new View(getContext());
+
                 LayoutParams dummyparams = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 10);
-                dummyparams.topMargin = 55;
-//                dummyparams.gravity = Gravity.CENTER_VERTICAL;
                 dummyparams.weight = 1;
                 dummy.setLayoutParams(dummyparams);
                 if(descriptor.status_completed){
@@ -90,6 +92,29 @@ public class TrackerView extends LinearLayout implements View.OnClickListener {
             }
 
         }
+
+        // add this ovserver so that we could adjust position and height od each divider after all views are laid out
+        // and their dimensions are available
+        this.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                int height = getHeight();
+
+                int heightInPixels = convertDpToPixels(3, getContext());
+
+                for(View v : dividers){
+                    LayoutParams params = (android.widget.LinearLayout.LayoutParams)v.getLayoutParams();
+                    params.topMargin = height/3;
+                    params.height = heightInPixels;
+                }
+                requestLayout();
+             }
+        });
+    }
+    private  int convertDpToPixels(float dp, Context context) {
+        int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources().getDisplayMetrics());
+        return px;
     }
 
     @Override

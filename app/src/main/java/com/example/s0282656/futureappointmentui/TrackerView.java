@@ -126,6 +126,7 @@ public class TrackerView extends LinearLayout implements View.OnClickListener {
 //        background.setStroke(10, getResources().getColor(R.color.colorAccent));
 
 //        Drawable dr = getResources().getDrawable(R.drawable.round_button_shape_completed);
+
         imageButton.setBackgroundResource(R.drawable.round_button_shape_completed);
 
         int tag = (int)imageButton.getTag();
